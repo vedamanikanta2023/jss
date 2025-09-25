@@ -1,0 +1,19 @@
+19/07/2024
+17/07/2024
+18/07/2024
+
+List of Things to do 
+
+1. Prepare interview questions and answers for react js developer
+2. Learn Next JS
+3. Learn Node Js
+
+1)Find the second Largest element in the array
+1) difference between map and foreach 
+2)var,let,const difference 
+3) Hoisting 
+4) closures and JavaScript concepts
+1)find the second largest element in an array with one for loop 
+2) remove duplicates from an array with using 2 for loops
+3)merge the two array 
+4)reverse a number
