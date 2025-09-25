@@ -6,7 +6,7 @@ let employee = {
 }
 
 console.log("Employee=> ", employee);
-let newEmployee = {...employee};
+let newEmployee = employee;
 console.log("New Employee=> ", newEmployee);
 
 console.log("---------After modification----------");
