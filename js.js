@@ -1,15 +1,16 @@
-let employee = {
-    eid: "E102",
-    ename: "Veda",
-    eaddress: "New York",
-    salary: 50000
+function createCounter() {
+  let count = 0; // 'count' is a local variable in createCounter's scope
+
+  return function() { // This is the inner function, forming a closure
+    count += 1;
+    return count;
+  };
 }
 
-console.log("Employee=> ", employee);
-let newEmployee = employee;
-console.log("New Employee=> ", newEmployee);
+const counter1 = createCounter(); // counter1 is a closure
+console.log(counter1()); // Output: 1
+console.log(counter1()); // Output: 2
 
-console.log("---------After modification----------");
-newEmployee.ename = "Beck";
-console.log("Employee=> ", employee);
-console.log("New Employee=> ", newEmployee);
+const counter2 = createCounter(); // counter2 is a separate closure
+console.log(counter2()); // Output: 1 (starts a new count)
+console.log(counter2()); // Output: 1 (starts a new count)
