@@ -4,10 +4,6 @@
 
 List of Things to do 
 
-1. Prepare interview questions and answers for react js developer
-2. Learn Next JS
-3. Learn Node Js
-
 1)Find the second Largest element in the array
 1) difference between map and foreach 
 2)var,let,const difference 
