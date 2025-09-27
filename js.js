@@ -1,2 +1,6 @@
-console.log(3>2>1);
-console.log(3>2>0);
+let name = "vikatakavi";
+
+let arr = name.split("");
+let reversedArr = arr.reverse();
+const reversedName = reversedArr.join("");
+console.log(reversedName)
