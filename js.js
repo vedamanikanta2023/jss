@@ -1,6 +1,6 @@
-let name = "vikatakavi";
+function isPalindrome(str) {
+    const reversed = str.split("").reverse().join("");
+    return str === reversed;
+}
 
-let arr = name.split("");
-let reversedArr = arr.reverse();
-const reversedName = reversedArr.join("");
-console.log(reversedName)
+console.log(isPalindrome("GFG"));
