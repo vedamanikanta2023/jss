@@ -1,9 +1,12 @@
-function sumArray(arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
+function isPrime(num) {
+    if (num <= 1) 
+        return false;
+    for (let i = 2; i < num; i++) 
+    {
+        if (num % i === 0) 
+            return false;
     }
-    return sum;
+    return true;
 }
 
-console.log(sumArray([15, 6, 10, 2]));
+console.log(isPrime(7));
