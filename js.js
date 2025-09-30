@@ -1,9 +1,13 @@
-function factorial(num) {
-    let answer = 1;
-    for (let i = 2; i <= num; i++) {
-        answer *= i;
+function frequency(arr) {
+    const freq = {};
+    for (let i = 0; i < arr.length; i++) {
+        if (freq[arr[i]]) {
+            freq[arr[i]] += 1;
+        } else {
+            freq[arr[i]] = 1;
+        }
     }
-    return answer;
+    return freq;
 }
 
-console.log(factorial(7));
+console.log(frequency([1, 1, 2, 3, 3, 4]));
