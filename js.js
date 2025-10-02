@@ -1,22 +1,23 @@
-const express = require("express");
-const app = express();
+function findLargestElement(nestedArray) { 
 
-// Middleware to parse JSON
-app.use(express.json());
+  let largest = nestedArray[0][0]; 
 
-// GET request
-app.get("/", (req, res) => {
-  res.json({ message: "Hello from GET request!" });
-});
+  for (let arr of nestedArray) { 
 
-// POST request
-app.post("/data", (req, res) => {
-  const data = req.body; // get JSON body
-  res.json({ message: "POST received!", data });
-});
+    for (let num of arr) { 
 
-// Start server
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+      if (num > largest) { 
+
+        largest = num; 
+
+      } 
+
+    } 
+
+  } 
+
+  return largest; 
+
+} 
+
+findLargestElement([654,654,61,516,48,654,321])
