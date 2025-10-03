@@ -1,23 +1,11 @@
-function findLargestElement(nestedArray) { 
+function isPalindrome(str) { 
 
-  let largest = nestedArray[0][0]; 
+  const cleanStr = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase(); 
 
-  for (let arr of nestedArray) { 
+  const reversedStr = cleanStr.split(”).reverse().join(”); 
 
-    for (let num of arr) { 
-
-      if (num > largest) { 
-
-        largest = num; 
-
-      } 
-
-    } 
-
-  } 
-
-  return largest; 
+  return cleanStr === reversedStr; 
 
 } 
 
-findLargestElement([654,654,61,516,48,654,321])
+console.log(isPalindrome("vedev"));
