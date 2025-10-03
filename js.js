@@ -1,11 +1,7 @@
-function isPalindrome(str) { 
+function areAnagrams(str1, str2) { 
 
-  const cleanStr = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase(); 
-
-  const reversedStr = cleanStr.split(”).reverse().join(”); 
-
-  return cleanStr === reversedStr; 
+  return str1.split("").sort().join("") === str2.split("").sort().join(""); 
 
 } 
 
-console.log(isPalindrome("vedev"));
+console.log(areAnagrams("listenk", "sileknt")); // true
