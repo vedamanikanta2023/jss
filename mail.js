@@ -1,13 +1,16 @@
 import nodemailer from "nodemailer"
+import  dotenv  from  "dotenv";
+
+dotenv.config();
 
 
-export const sendMail = (pass) => {
+export const sendMail = () => {
     // Create a transporter (email service configuration)
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: "vedamanikanta.dali@gmail.com",
-        pass
+        pass:process.env.MAIL_PASS
       },
     });
     
@@ -18,7 +21,6 @@ export const sendMail = (pass) => {
       subject: "Test Email from Node.js",
       html: `<h2>Hello from Node.js!</h2><p>This is a test email.</p>
       <lable>pass for mail is</lable>
-      <h1>${pass}</h1>
       `,
     };
 
@@ -29,5 +31,5 @@ export const sendMail = (pass) => {
       console.log("Email sent:", info.response);
     }
   });
-  
+
 };
