@@ -1,14 +1,13 @@
-(function() {
-    console.log(1);
-    setTimeout(function() {
-        console.log(2);
-    }, 1000);
-    setTimeout(function() {
-        console.log(3);
-    }, 0);
-    Promise.resolve("5").then((value) => console.log(value));
-    console.log(4);
-})();
+(function(x) {
+    return (function(y) {
+        console.log(x);
+    })(2)
+})(1);
 
-
-
+const fun = function (x) {
+  const innerfunction = function (y) {
+    console.log(x);
+  };
+  return innerfunction(2);
+};
+console.log(fun(22));
