@@ -1,9 +1,14 @@
-console.log("This is the first statement");
+(function() {
+    console.log(1);
+    setTimeout(function() {
+        console.log(2);
+    }, 1000);
+    setTimeout(function() {
+        console.log(3);
+    }, 0);
+    Promise.resolve("5").then((value) => console.log(value));
+    console.log(4);
+})();
 
-setTimeout(function() {
-    console.log("This is the second statement");
-}, 1000);
 
-Promise.resolve(console.log("hi I'm promise"))
 
-console.log("This is the third statement");
