@@ -1,13 +1,13 @@
-(function(x) {
-    return (function(y) {
-        console.log(x);
-    })(2)
-})(1);
-
-const fun = function (x) {
-  const innerfunction = function (y) {
-    console.log(x);
-  };
-  return innerfunction(2);
+const userDetails = {
+  name: "vedamanikanta",
+  age: 26,
+  bike: {
+    bikeName: "bik2340",
+    cc: 140,
+  },
 };
-console.log(fun(22));
+
+const copyUserDetails = JSON.parse(JSON.stringify(userDetails));
+copyUserDetails.bike.bikeName = "pulsar";
+console.log({ userDetails, copyUserDetails });
+
