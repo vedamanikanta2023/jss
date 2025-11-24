@@ -1,20 +1,5 @@
-const not = "hai";
-function outer(){
-  let count = 0
-  return function inner(){
-    count ++;
-    console.log(count)
-    return count;
-  }
+function sum(a=5,b=8){
+  return a+b;
 }
 
-
-const f1 = outer();
-f1()
-f1()
-const f2 = outer();
-f2()
-f2()
-f2()
-f2()
-console.log(f1,f2)
+console.log(sum(null,98));
