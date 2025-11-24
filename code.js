@@ -3,3 +3,5 @@ function sum(a=5,b=8){
 }
 
 console.log(sum(null,98));
+
+console.log([]==true)
