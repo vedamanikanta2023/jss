@@ -1,7 +1,8 @@
-function sum(a=5,b=8){
-  return a+b;
+const add = ()=>{
+  return 5+6;
 }
 
-console.log(sum(null,98));
+const arr = [2,add,false];
 
-console.log([]==true)
+let res =  arr[1](1);
+console.log(res);
