@@ -7,7 +7,10 @@ const str = "The quick brown fox jumped over the lazy dog";
 const longestWords = [];
 
 const arrOfStrings = str.split(" ");
-const lengsOfStrs=arrOfStrings.map((str1)=>str1.length);
+const lengsOfStrs=arrOfStrings.map((str1)=>{
+  console.log(str1.length)
+  return str1.length
+});
 let longestWord=Math.max(lengsOfStrs);;
 arrOfStrings.forEach((singleStr)=>{
     if(singleStr.length>=longestWord.length){
@@ -16,4 +19,4 @@ arrOfStrings.forEach((singleStr)=>{
     }
 })
 
-console.log(longestWord)
+console.log(lengsOfStrs,arrOfStrings)
