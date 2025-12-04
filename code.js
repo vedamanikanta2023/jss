@@ -1,12 +1,18 @@
-function Car(color, brand) {
-  this.color = color;
-  this.brand = brand;
-  this.start = function() {
-    console.log("started",this.color);
-  };
-  // return this
+//----difference between var vs (const and let)---//
+
+function someFun(){
+  if(true){
+    var game = "bedam"
+  }
+  if(true){
+    let name = "vedam"
+  }
+  
+  if(true){
+    const fame = "actor"
+  }
+  console.log(game,name);
+  console.log(fame);
 }
 
-let car1 = new Car("blue", "Audi");
-car1.start()
-// console.log(car1.start());
+someFun()
