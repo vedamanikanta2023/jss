@@ -4,20 +4,18 @@ var age = null;
 console.log(null !== age);
 
 // promise chaining
-function promising(a, b) {
-  return new Promise((resolve, reject) => {
-    setTimeout(function () {
-      resolve(a + b);
-    });
+let a = 2;
+b = 6;
+
+new Promise((resolve, reject) => {
+  setTimeout(function () {
+    resolve(a + b);
+  }, 2000);
+})
+  .then((response) => {
+    return response * 2;
   })
-    .then((response) => {
-      return response * 2;
-    })
-    .then((response) => {
-      return response/3
-    });
-}
-promising(4, 5)
-.then(res=>{
-    console.log(res)
-}).catch(e=>console.log(e))
+  .then((response) => {
+    console.log(response / 3);
+    return response / 3;
+  });
