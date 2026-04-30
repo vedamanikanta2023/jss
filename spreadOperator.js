@@ -69,3 +69,9 @@ for (let i = 2; i < 10; i++) {
 
 const {name,city,...rest} = personDetails;
 console.log(name,city,rest,'rest')
+
+const add1 = (a,b,...rest)=>{
+    console.log(a,b,rest,'add1')
+}
+
+add(1, 2, 3, 4, 5)
