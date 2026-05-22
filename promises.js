@@ -19,3 +19,21 @@ fetData
   .finally(() => {
     console.log("finally");
   });
+
+
+  const promise1 = new Promise((resolve,reject)=>{
+    setTimeout(resolve,900,'Promise 1 result')
+})
+
+const promise2 = new Promise((resolve,reject)=>{
+    setTimeout(resolve,600,'Promise 2 result')
+})
+const promise3 = new Promise((resolve,reject)=>{
+    setTimeout(resolve,200,'Promise 3 result')
+})
+
+Promise.all([promise1,promise2,promise3])
+.then(result=>{
+    console.log('result: ',result)
+})
+.catch(e=>console.error('error',e))
