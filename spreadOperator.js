@@ -33,7 +33,7 @@ function debounce(func, delay = 1000) {
     timeout = setTimeout(() => {
       func(...args);
     }, delay);
-  };
+  }();
 }
 
 for (let i = 2; i < 10; i++) {
