@@ -28,3 +28,21 @@ Car.prototype.getDetails = function () {
   return `name of the car ${this.name}`;
 };
 console.log(carObj, Model.prototype, carObj.getSometing(), "prototype");
+
+
+class NewCar {
+  constructor(name) {
+    this.name = name
+  }
+
+  get getMyCarDetails(){
+    return this.name
+  }
+  set getMyCarDetails(name){
+    this.name = name
+  }
+}
+
+const car = new NewCar('Audi');
+console.log(car.getMyCarDetails )
+console.log(car.getMyCarDetails = 'vedam')
