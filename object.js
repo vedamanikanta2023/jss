@@ -4,9 +4,9 @@ let person = {
   age: 28,
 };
 
-const jsoned = JSON.stringify(person)
-console.log(jsoned, typeof jsoned)
-localStorage.setItem('test23',jsoned)
+const jsoned = JSON.stringify(person,['age','lastName'])
+console.log(jsoned)
+
 // document.getElementById('root').innerHTML=jsoned;
 // const k={}
 
@@ -16,3 +16,19 @@ localStorage.setItem('test23',jsoned)
 // k[b]=234
 // k[c]='ojf'
 // console.log(k[b],k)
+
+const shape = {
+  radius:10,
+  diameter(){
+    return this.radius*2
+  },
+  perimeter:function(){
+    return 2*Math.PI*this.radius
+  },
+  perimeterWithArrowFn:()=>{
+    return 2*Math.PI*this.radius
+  }
+}
+
+console.log(shape.diameter())
+console.log(shape.perimeterWithArrowFn())
