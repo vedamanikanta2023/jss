@@ -3,17 +3,16 @@ let person = {
   lastName: "Attuluri",
   age: 28,
 };
-let { gender:gen='jasf', age } = person;
 
-let a = 'firstName';
-person['country'] = 'India'
-console.log(person)
+const jsoned = JSON.stringify(person)
+console.log(jsoned, typeof jsoned)
+localStorage.setItem('test23',jsoned)
+// document.getElementById('root').innerHTML=jsoned;
+// const k={}
 
-const k={}
+// const b={key:'b'};
+// const c={key:'c'};
 
-const b={key:'b'};
-const c={key:'c'};
-
-k[b]=234
-k[c]='ojf'
-console.log(k[b],k)
+// k[b]=234
+// k[c]='ojf'
+// console.log(k[b],k)
