@@ -11,7 +11,7 @@ const printFullName = function(town, city, country)  {
 
 let printMyName = printFullName.bind(name,'dehradun','Delhi')
 console.log(printMyName())
-
+//polyfill polyfill
 Function.prototype.mybind = function(...args){
     let obj=this;
     let params = args.slice(1);
