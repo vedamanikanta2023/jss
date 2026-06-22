@@ -25,4 +25,30 @@ function aa() {
   }
 }
 
-aa();
+// aa();
+
+
+var person = {
+    name:'vedamaniaknta',
+    hello:function(text){
+        console.log(`${this.name} saying hello ${text}, from ___`);
+        return 'for bind'
+    }
+}
+
+var person1 = {
+    name:'rakaa..!'
+}
+
+var person2 = {
+    name:'chandu eld'
+}
+
+var person3 = {
+    name: 'raj kumar'
+}
+
+person.hello.call(person1,'world! call')
+person.hello.apply(person2,['world! apply'])
+const binding = person.hello.bind(person3)
+console.log(binding('world bind'),'binding')
