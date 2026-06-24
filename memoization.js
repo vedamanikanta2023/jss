@@ -25,3 +25,15 @@ console.log(addtwo(2,3));
 console.log(addtwo(5,3));
 console.log(addtwo(5,3));
 console.log(map);
+
+const clumsySquare = (num1,num2)=>{
+    // for (let i=0;i<1000000;i++){}
+    return num1*num2
+}
+
+console.time("hi");
+clumsySquare(3298,98432);
+console.timeEnd("hi");
+console.time("hii");
+clumsySquare(3298,98432);
+console.timeEnd("hii");
