@@ -1,0 +1,26 @@
+const add = (a,b)=>a+b;
+
+const map = new Map();
+
+function memoizeOne(fn){
+
+    function temp(...args){
+        const keys = args.join('_');
+        if(map.has(keys)){
+            console.log('returning from cache');
+            return map.get(keys)
+        }
+        const result = fn(...args);
+        map.set(keys,result)
+        return result;
+    }
+
+    return temp;
+}
+
+const addtwo = memoizeOne(add);
+console.log(addtwo(2,3));
+console.log(addtwo(2,3));
+console.log(addtwo(5,3));
+console.log(addtwo(5,3));
+console.log(map);
