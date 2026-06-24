@@ -1,3 +1,4 @@
+//memoizing the values, logic 
 const add = (a,b)=>a+b;
 
 const map = new Map();
