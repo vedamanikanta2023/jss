@@ -9,7 +9,7 @@ const person = {
   },
 };
 
-// person.greet()
+person.greet()
 
 const sum = (...args) => {
   return args.map((num) => num + 1);
