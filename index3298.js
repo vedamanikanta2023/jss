@@ -1,15 +1,14 @@
 const users = [
-  { name: "abc", age: 35, isAdmin: true },
-  { name: "xyz", age: 25, isAdmin: true },
-  { name: "pqr", age: 30, isAdmin: false },
+  { name: 'abc', isAdmin: true },
+  { name: 'xyz', isAdmin: false },
+  { name: 'pqr', isAdmin: true }
 ];
 
-const biggest = users.reduce(
-  (curr, acc) => {
-    return curr.age > acc.age ? curr : acc;
-  },
-  { age: 0 },
-);
-console.log(biggest);
+const grouped = users.reduce((acc,curr)=>{
+    const key = curr['isAdmin'] ? 'admins':'non admins'
+    console.log(acc,curr,'inn')
+    acc[key]=[...(acc[key]||[]),curr]
+    return acc
+},{})
 
-console.log(-5 / 0);
+console.log(grouped,'max')
