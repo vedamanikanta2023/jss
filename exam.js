@@ -1,11 +1,11 @@
-// console.log("A");
-// setTimeout(() => console.log("F"), 10);
-// setTimeout(() => console.log("B"), 0);
-// Promise.resolve().then(() => console.log("C"));
-// // queueMicrotask(() => console.log("D"));
-// console.log("E");
+console.log("A");
+setTimeout(() => console.log("F"), 10);
+setTimeout(() => console.log("B"), 0);
+Promise.resolve().then(() => console.log("C"));
+queueMicrotask(() => console.log("D"));
+console.log("E");
 
-// //a ,e,c,b,f
+a ,e,c,b,f
 
 const str1 = "welcome to this world";
 
