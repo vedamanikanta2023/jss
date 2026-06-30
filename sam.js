@@ -10,7 +10,7 @@ const Rejection = new Promise((resolve, reject) => {
   setTimeout(reject, 100, "Rejected"); //always rejected
 });
 
-Promise.any([SlowlyDone, QuicklyDone, Rejection])
+Promise.allSettled([SlowlyDone, QuicklyDone, Rejection])
   .then((value) => {
     console.log(value);
     //  QuicklyDone fulfils first
