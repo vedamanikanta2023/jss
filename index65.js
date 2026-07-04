@@ -1,21 +1,8 @@
-async function doTask() {
-    const name = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve("vedamanikanta");
-        }, 100);
-    });
-
-    return await name;
+if (true) {
+  var name = "mani";
+  let name2 = "no";
+  var name = "nokfads";
+  name2 = "mokfds";
 }
 
-async function main() {
-    const result = await doTask();
-    console.log(result);
-}
-
-main();
-
-console.log(n);
-var n =1;
-let k = 2;
-const i = 4;
+console.log(name, "varing -->");
