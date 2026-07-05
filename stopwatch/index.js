@@ -1,29 +1,29 @@
-let timer = 0;
-let intervalId;
+// let timer = 0;
+// let intervalId;
 
-const renderUI = (time = 0) => {
-  let timerNode = document.getElementById("timer");
-  timerNode.innerHTML = time;
-  //   timerNode.innerHTML =new Date().toLocaleTimeString()// time;
-};
+// const renderUI = (time = 0) => {
+//   let timerNode = document.getElementById("timer");
+//   timerNode.innerHTML = time;
+//   //   timerNode.innerHTML =new Date().toLocaleTimeString()// time;
+// };
 
-function stop() {
-  clearInterval(intervalId);
-}
+// function stop() {
+//   clearInterval(intervalId);
+// }
 
-function reset() {
-  clearInterval(intervalId);
-  timer = 0;
-  renderUI(timer);
-}
+// function reset() {
+//   clearInterval(intervalId);
+//   timer = 0;
+//   renderUI(timer);
+// }
 
-function start() {
-  intervalId = setInterval(function () {
-    console.log("timer", timer);
-    timer += 1;
-    renderUI(timer);
-  }, 1000);
-}
+// function start() {
+//   intervalId = setInterval(function () {
+//     console.log("timer", timer);
+//     timer += 1;
+//     renderUI(timer);
+//   }, 1000);
+// }
 // start()
 
 class Stopwatch {
