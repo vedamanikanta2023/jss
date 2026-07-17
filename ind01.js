@@ -1,19 +1,27 @@
-
-function fetching(){
-
-    // fetch('https://dummyjson.com/products')
-    //   .then((response) => response.json())
-    //   .then((data) => console.log(data)) // Non-blocking
-    //   .catch((error) => console.error('er',error));
-
-      return new Promise((res,rej)=>{
-        fetch('https://dummyjson.com/products')
-        .then(response=>response.json())
-        .then(data=>res(data));
-      })
+function fetching() {
+  return new Promise((res, rej) => {
+    fetch("https://dummyjson.com/products")
+      .then((response) => response.json())
+      .then((data) => res(data))
+      .catch((err) => res(err));
+  });
 }
 
-console.log('Start of the program');
+let apiData;
 
-const fetchedDAta = fetching()
-console.log('End of program');
+console.log("Start of the program");
+
+async function doFetch() {
+  apiData = await fetching();
+  console.log(apiData);
+  return apiData;
+}
+
+var dataddd = doFetch();
+console.log(typeof dataddd);
+setTimeout(async() => {
+  console.log(await dataddd);
+});
+
+console.log("result of fetch", apiData);
+console.log("end of program");
