@@ -1,6 +1,8 @@
-const promise1 = fetch('https://api.example.com/data/1');
-const promise2 = fetch('https://api.example.com/data/2');
-const promise3 = fetch('https://api.example.com/data/3');
+const { EventEmitter } = require("nodemailer/lib/xoauth2");
+
+const promise1 = fetch('https://dummyjson.com/carts');
+const promise2 = fetch('https://dummyjson.com/carts');
+const promise3 = fetch('https://dummyjson.com/carts');
 
 Promise.all([promise1, promise2, promise3])
   .then((responses) => {
@@ -11,3 +13,16 @@ Promise.all([promise1, promise2, promise3])
     // Catches any error from any promise.
     console.error('Error:', error);
   });
+
+
+
+  const eventEmitter = new EventEmitter();
+
+// Subscribe to an event
+eventEmitter.on('customEvent', (data) => {
+  console.log('Event emitted with data:', data);
+});
+
+// Emit the event
+eventEmitter.emit('customEvent', { message: 'Hello, world!' });
+
