@@ -41,3 +41,11 @@ const nestedArray = [1, [2, [3, [4, [5]]]]];
 const flatArray = flattenArray(nestedArray);
 
 console.log(flatArray); // Output: [1, 2, 3, 4, 5]
+
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+
+const mergedObj = Object.assign({}, obj1, obj2);
+
+console.log(mergedObj); // Output: { a: 1, b: 3, c: 4 }
+
