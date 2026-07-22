@@ -26,3 +26,18 @@ eventEmitter.on('customEvent', (data) => {
 // Emit the event
 eventEmitter.emit('customEvent', { message: 'Hello, world!' });
 
+
+
+// Custom recursive array flattener
+function flattenArray(arr) {
+  return arr.reduce(
+    (acc, val) =>
+      Array.isArray(val) ? acc.concat(flattenArray(val)) : acc.concat(val),
+    [],
+  );
+}
+
+const nestedArray = [1, [2, [3, [4, [5]]]]];
+const flatArray = flattenArray(nestedArray);
+
+console.log(flatArray); // Output: [1, 2, 3, 4, 5]
