@@ -1,28 +1,37 @@
 const todos = [];
 
+const todoItemStyles = {
+  display: "flex",
+  gap: "5px",
+};
+
 const inputElement = document.getElementById("input");
 
 function addTodo() {
-  todos.push(inputElement.value);
+  const newTodo = {
+    todo: String(inputElement.value).toUpperCase(),
+    isCompleted: false,
+  };
+  todos.push(newTodo);
   console.log(todos);
+  renderTodos(newTodo);
+  inputElement.value = "";
 }
 
+const todosContainer = document.getElementById("todosContainer");
 
-// const todos = [];
+function renderTodos(newTodoItem) {
+  const todoItem = document.createElement("div");
 
-// // 1. Select the element once when the page loads
-// const inputElement = document.getElementById("input");
+  Object.assign(todoItem.style, todoItemStyles);
 
-// function addTodo() {
-//   // 2. Get the current text using .value inside the function
-//   const currentText = inputElement.value;
-  
-//   // 3. Optional: Prevent adding empty items
-//   if (currentText.trim() !== "") {
-//     todos.push(currentText);
-//     console.log(todos);
-    
-//     // 4. Optional: Clear the input box for the next item
-//     inputElement.value = ""; 
-//   }
-// }
+  const todo = document.createElement("p");
+  todo.textContent = newTodoItem.todo;
+  todoItem.appendChild(todo);
+
+  const todoStatus = document.createElement("p");
+  todoStatus.textContent = newTodoItem.isCompleted ? "Completed" : "Pending";
+  todoItem.appendChild(todoStatus);
+
+  todosContainer.appendChild(todoItem);
+}
