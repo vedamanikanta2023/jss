@@ -1,6 +1,6 @@
-const obj1 = { a: 1, b: 2 };
-const obj2 = { b: 3, c: 4 };
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
 
-const mergedObj = Object.assign({}, obj1, obj2);
+const mergedArray = [...array1, ...array2];
 
-console.log(mergedObj);
+console.log(mergedArray); // Output: [1, 2, 3, 4, 5, 6]
