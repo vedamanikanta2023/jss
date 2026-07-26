@@ -1,6 +1,6 @@
-// process // argv
-const argn = process.argv[2]
-const nn = process.argv[3]
-console.log(argn,nn)
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
 
-console.log(process.argv,'argv');
+const mergedObj = Object.assign({}, obj1, obj2);
+
+console.log(mergedObj);
