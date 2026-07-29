@@ -18,4 +18,4 @@ setImmediate(()=>{
 setImmediate(()=>{
     console.log('4');
 })
-// console.log('start');
+console.log('start'); // do commenintg and uncommenting this and check
