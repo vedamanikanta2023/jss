@@ -1,3 +1,7 @@
+Promise.resolve().then(()=>{
+    console.log('p1');
+    return Promise.resolve('notning')
+}).then((k)=>console.log('promise resolved with ',k))
 console.log('start');
 
 setTimeout(() => {
