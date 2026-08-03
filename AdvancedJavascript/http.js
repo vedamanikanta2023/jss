@@ -40,3 +40,19 @@ get('http://www.google.com',(res)=>{
         console.log(`no more chunks`);
     })
 })
+
+/// creating server ///
+
+const http   = require('http');
+
+const server = http.createServer((req,res)=>{
+    console.log(req.headers,'headers end');
+    console.log('url__ ',req.url);
+    res.end('Hello from the server')
+});
+
+const PORT = 3001;
+
+server.listen(PORT,()=>{
+    console.log(`server running on port ${PORT}`);
+})
