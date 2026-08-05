@@ -1,5 +1,6 @@
+import { add } from "./math"; //importing in es6 types
 // named export
-export const add = () => {
+export const addd = () => {
   return 2 + 3;
 };
 
