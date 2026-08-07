@@ -1,5 +1,3 @@
-console.log(foo); // undefined
-var foo = 'foo';
-
-console.log(bar); // ReferenceError
-let bar = 'bar';
+42 == '42'; // true
+0 == false; // true
+null == undefined; // true
