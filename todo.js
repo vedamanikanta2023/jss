@@ -1,9 +1,5 @@
-if (true) {
-  var foo = 1;
-  let bar = 2;
-  const baz = 3;
-}
+console.log(foo); // undefined
+var foo = 'foo';
 
-console.log(foo); // 1
 console.log(bar); // ReferenceError
-console.log(baz); // ReferenceError
+let bar = 'bar';
