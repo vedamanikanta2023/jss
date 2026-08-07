@@ -1,3 +1,3 @@
-42 == '42'; // true
-0 == false; // true
-null == undefined; // true
+let x = null;
+console.log(x == null); // true
+console.log(x == undefined); // true
