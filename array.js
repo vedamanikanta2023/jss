@@ -7,5 +7,5 @@ console.log(myArray,'myArray',removedItem)
 
 for (let item of myArray){
     if(item===2) break;
-    console.log(item)
+    // console.log(item)
 }
