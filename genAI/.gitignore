@@ -1,0 +1,4 @@
+# Ignore a specific folder (add a trailing slash)
+node_modules/
+
+*.env

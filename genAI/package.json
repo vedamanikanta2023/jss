@@ -1,0 +1,17 @@
+{
+  "name": "genai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "vedamanikanta vanga",
+  "license": "ISC",
+  "dependencies": {
+    "@google/genai": "^2.16.0",
+    "dotenv": "^17.4.2"
+  }
+}
