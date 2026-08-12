@@ -1,14 +1,14 @@
 import { GoogleGenAI } from "@google/genai";
 import "dotenv/config";
 
-const AI = new GoogleGenAI({});
+export const AI = new GoogleGenAI({});
 
 async function generateResponse() {
   try {
   } catch (error) {}
 
   const response = await AI.models.generateContent({
-    model: "gemini-flash-latest", //"gemini-2.5-flash",
+    model: process.env.MODEL, //"gemini-2.5-flash",
     contents: "Summarize the contents of Node.js in 3 bullet points",
   });
 
@@ -17,3 +17,5 @@ async function generateResponse() {
 }
 
 generateResponse();
+
+
