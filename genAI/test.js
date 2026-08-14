@@ -16,6 +16,6 @@ async function generateResponse() {
   console.log("Generated Answer:\n", response.text);
 }
 
-generateResponse();
+// generateResponse();
 
 
