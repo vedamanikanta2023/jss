@@ -16,3 +16,16 @@ console.log('anonymous cb');
 Array([1,2,3,4]).forEach(element => {
     console.log('higher order function with anonymous function');
 });
+
+// asynchronus progam
+console.log("A");
+
+setTimeout(() => {
+  console.log("B");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("C");
+});
+
+console.log("D");
