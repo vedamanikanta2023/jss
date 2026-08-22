@@ -29,3 +29,24 @@ Promise.resolve().then(() => {
 });
 
 console.log("D");
+
+//memoization
+
+function memoize(fn) {
+  const cache = {};
+  return function (...args) {
+    const key = JSON.stringify(args);
+    return cache[key] || (cache[key] = fn.apply(this, args));
+  };
+}
+
+function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+const memoizedFibonacci = memoize(fibonacci);
+
+console.log(memoizedFibonacci(6)); // Output: 8
+console.log(memoizedFibonacci(7)); // Output: 13
+console.log(memoizedFibonacci(6)); // Output: 8 (retrieved from cache)
